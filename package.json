@@ -1,0 +1,10 @@
+{
+  "name": "roblox-create-game",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "make a public Roblox game on your phone without Roblox Studio, so you can create game passes.",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

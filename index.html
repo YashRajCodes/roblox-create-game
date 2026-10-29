@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>how to make a game pass on roblox mobile (no studio)</title>
+<meta name="description" content="make a game pass on roblox mobile without roblox studio or a computer. one tap creates a public game on your account and opens its game passes page. free.">
+<link rel="canonical" href="https://yashrajcodes.github.io/roblox-create-game/">
+<meta name="theme-color" content="#09090b">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="roblox create game">
+<meta property="og:url" content="https://yashrajcodes.github.io/roblox-create-game/">
+<meta property="og:title" content="how to make a game pass on roblox mobile (no studio)">
+<meta property="og:description" content="one tap creates a public roblox game on your phone and opens its game passes page. no studio, no computer.">
+<meta property="og:image" content="https://yashrajcodes.github.io/roblox-create-game/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="make a game pass on roblox mobile. no roblox studio, no computer. free.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "SoftwareApplication",
+   "name": "roblox create game bookmarklet",
+   "url": "https://yashrajcodes.github.io/roblox-create-game/",
+   "description": "one tap creates a public roblox game on your phone and opens its game passes page, so you can make game passes without roblox studio.",
+   "image": "https://yashrajcodes.github.io/roblox-create-game/og.png",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Android, iOS, Windows, macOS, ChromeOS",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "how do I make a game pass on roblox mobile?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "the roblox app can't create games, and every game pass has to belong to a game. run the code above to make a game first. it opens the game's passes page, where you create a pass, give it a name and image, then turn on \"item for sale\" and set a price in robux."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "why do I need a game to make a game pass?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "game passes are sold inside a game, so roblox only lets you create them for a game you own. donation games like pls donate also read passes from your public games, so the game has to be public too."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "what does the script do?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "it creates a new game on your account from the ugc homestore template, names it \"[your username]'s donation game\", answers the maturity questionnaire with \"no\" for every question, makes the game public, and opens its game passes page."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "is it safe?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "the script runs in your browser on roblox.com using the account you're already logged into. it doesn't ask for your password and doesn't send anything anywhere except roblox's own servers. the full source is on github. as a general rule, only run javascript: code from sources you trust, since it can do anything your account can."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "does it work on iphone and android?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "yes. the phone steps are written for chrome. if typing javascript: in the address bar doesn't show a link in your browser, bookmark any page, edit the bookmark, replace its address with the code, then open roblox.com and tap the bookmark."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "why does it have to run on www.roblox.com?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "the script uses your login on www.roblox.com. create.roblox.com has a content security policy that blocks bookmarklets, so running it there does nothing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "does it cost robux?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "no. making a game is free, and so is this tool. when someone buys one of your game passes, roblox keeps 30% and you get 70% of the price."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "can I rename the game or make more than one?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "yes. you can change the name, icon, and description from the creator dashboard at any time. running the script again makes another new game."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "it showed an error. what now?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "the error says which step failed. check that you're logged in and on www.roblox.com, then try again. if a game was already made before the error, you can find it in the creator dashboard under creations."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0 auto; max-width: 640px; padding: 0 16px;
+    background: #09090b; color: #fafafa;
+    font: 14px/1.5 ui-sans-serif, system-ui, sans-serif;
+  }
+  main {
+    min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding: 24px 0;
+    display: flex; flex-direction: column; justify-content: center; gap: 12px;
+  }
+  #faq { padding: 24px 0 48px; border-top: 1px solid #27272a; }
+  #faq h3 { font-size: 14px; margin: 20px 0 4px; }
+  #faq p { margin: 0; color: #a1a1aa; }
+  #faq a { color: #fafafa; }
+  h1 { font-size: 16px; margin: 0; text-align: center; text-wrap: balance; }
+  ol { margin: 4px 0 0; padding-left: 20px; color: #a1a1aa; }
+  li + li { margin-top: 4px; }
+  ol a { color: #fafafa; }
+  h2 { font-size: 14px; margin: 0; color: #fafafa; }
+  #install, textarea { border: 1px solid #27272a; border-radius: 8px; }
+  #install {
+    display: block; text-align: center; padding: 8px 16px;
+    color: #fafafa; text-decoration: none; cursor: grab;
+  }
+  #install:not([href]) { color: #a1a1aa; cursor: default; }
+  #raw {
+    display: block; width: 100%; height: 128px; box-sizing: border-box;
+    background: transparent; color: #a1a1aa; padding: 8px 12px; overflow: hidden;
+    font: 12px/1.5 ui-monospace, monospace; resize: vertical;
+  }
+  #raw::placeholder { color: #a1a1aa; }
+  small { color: #a1a1aa; font-size: 12px; text-align: center; }
+  #install:focus-visible, #raw:focus { outline: 2px solid #fafafa; outline-offset: 2px; border-color: transparent; }
+  code { font: 12px ui-monospace, monospace; color: #fafafa; }
+  .phone { display: none; }
+  @media (pointer: coarse) {
+    body { font-size: 16px; }
+    main { justify-content: flex-start; padding-top: 12vh; }
+    h1 { font-size: 20px; }
+    h2, #faq h3 { font-size: 16px; }
+    code { font-size: 14px; }
+    #raw { font-size: 16px; height: 96px; }
+    small { font-size: 14px; }
+    .phone { display: block; }
+    .desktop, #install { display: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>make a game pass on roblox mobile, no studio needed</h1>
+<section class="desktop">
+  <h2>on desktop</h2>
+  <ol>
+    <li>drag the button below to your bookmarks bar.</li>
+    <li>open <a href="https://www.roblox.com">roblox.com</a> and log in.</li>
+    <li>click the bookmark. your game gets made and you land on its game passes page.</li>
+  </ol>
+</section>
+<section class="phone">
+  <h2>on phone</h2>
+  <ol>
+    <li>tap the code box below to copy it.</li>
+    <li>open <a href="https://www.roblox.com">roblox.com</a> and log in.</li>
+    <li>tap the address bar, type <code>javascript:</code> and paste the code right after it. (pasting removes the <code>javascript:</code> part, so you have to type it.)</li>
+    <li>don't press enter. tap the blue link that shows up under the address bar.</li>
+    <li>your game gets made and you land on its game passes page.</li>
+  </ol>
+</section>
+
+<a id="install" draggable="true">drag to bookmarks</a>
+<textarea id="raw" readonly spellcheck="false" aria-label="bookmarklet source" placeholder="loading…"></textarea>
+<small><a href="https://github.com/YashRajCodes/roblox-create-game" style="color:#a1a1aa">source on github</a></small>
+</main>
+
+<section id="faq">
+  <h2>faq</h2>
+  <h3>how do I make a game pass on roblox mobile?</h3>
+  <p>the roblox app can't create games, and every game pass has to belong to a game. run the code above to make a game first. it opens the game's passes page, where you create a pass, give it a name and image, then turn on "item for sale" and set a price in robux.</p>
+  <h3>why do I need a game to make a game pass?</h3>
+  <p>game passes are sold inside a game, so roblox only lets you create them for a game you own. donation games like pls donate also read passes from your public games, so the game has to be public too.</p>
+  <h3>what does the script do?</h3>
+  <p>it creates a new game on your account from the ugc homestore template, names it "[your username]'s donation game", answers the maturity questionnaire with "no" for every question, makes the game public, and opens its game passes page.</p>
+  <h3>is it safe?</h3>
+  <p>the script runs in your browser on roblox.com using the account you're already logged into. it doesn't ask for your password and doesn't send anything anywhere except roblox's own servers. the full source is on <a href="https://github.com/YashRajCodes/roblox-create-game">github</a>. as a general rule, only run <code>javascript:</code> code from sources you trust, since it can do anything your account can.</p>
+  <h3>does it work on iphone and android?</h3>
+  <p>yes. the phone steps are written for chrome. if typing <code>javascript:</code> in the address bar doesn't show a link in your browser, bookmark any page, edit the bookmark, replace its address with the code, then open roblox.com and tap the bookmark.</p>
+  <h3>why does it have to run on www.roblox.com?</h3>
+  <p>the script uses your login on www.roblox.com. create.roblox.com has a content security policy that blocks bookmarklets, so running it there does nothing.</p>
+  <h3>does it cost robux?</h3>
+  <p>no. making a game is free, and so is this tool. when someone buys one of your game passes, roblox keeps 30% and you get 70% of the price.</p>
+  <h3>can I rename the game or make more than one?</h3>
+  <p>yes. you can change the name, icon, and description from the creator dashboard at any time. running the script again makes another new game.</p>
+  <h3>it showed an error. what now?</h3>
+  <p>the error says which step failed. check that you're logged in and on www.roblox.com, then try again. if a game was already made before the error, you can find it in the creator dashboard under creations.</p>
+</section>
+
+<script>
+  const install = document.getElementById('install');
+  const raw = document.getElementById('raw');
+
+  fetch('dist/script.min.js', { cache: 'no-store' })
+    .then((r) => { if (!r.ok) throw 0; return r.text(); })
+    .then((text) => { install.href = raw.value = 'javascript:' + text.trim(); })
+    .catch(() => { raw.value = 'dist/script.min.js not found'; });
+
+  function copy() { navigator.clipboard?.writeText(raw.value).catch(() => {}); }
+  raw.addEventListener('click', () => raw.select());
+  raw.addEventListener('select', copy);
+</script>
+</body>
+</html>

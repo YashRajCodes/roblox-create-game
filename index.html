@@ -10,6 +10,7 @@
 <link rel="icon" href="assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="roblox create game">
 <meta property="og:url" content="https://yashrajcodes.github.io/roblox-create-game/">
@@ -128,11 +129,15 @@
 }
 </script>
 <style>
+  @font-face {
+    font-family: Outfit; font-style: normal; font-weight: 100 900; font-display: swap;
+    src: url(assets/fonts/outfit.woff2) format("woff2");
+  }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0 auto; max-width: 640px; padding: 0 16px;
     background: #09090b; color: #fafafa;
-    font: 14px/1.5 ui-sans-serif, system-ui, sans-serif;
+    font: 14px/1.5 Outfit, ui-sans-serif, system-ui, sans-serif;
   }
   main {
     min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding: 24px 0;

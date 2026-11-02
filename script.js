@@ -68,7 +68,7 @@
     return { universeId: data.universeId, placeId: data.rootPlaceId };
   };
 
-  // change game name to "[username]'s Donation Game""
+  // change game name to "[username]'s Donation Game"
   const gameName = (autoName) =>
     /Place:/.test(autoName) ? autoName.replace(/Place:.*$/, 'Donation Game').trim() : autoName;
 
@@ -80,7 +80,7 @@
 
     const res = await api(`https://develop.roblox.com/v2/universes/${universeId}/configuration`, {
       method: 'PATCH',
-      body: { name },
+      body: { name, description: 'meow :3' },
     });
     await requireOk(res, 'Rename');
     return name;
